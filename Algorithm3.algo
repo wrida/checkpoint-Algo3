@@ -1,0 +1,26 @@
+FUNCTION Dot_Product(v1,v2 : Array_Of_Float[3]) : Float
+VAR
+   ps : float := 0
+   i : integer
+BEGIN
+    FOR i From 0 to v1.Length-1 Do
+    ps = ps+ v1[i] * v2[i]
+    End for
+    RETURN ps ;
+
+ALGORITHM Dot product
+VAR
+  currentVectors : Array_Of_Float [3]
+  n : integer
+  tab : Array_Of_Array[n]
+BEGIN
+   Read('enter pair number', n)
+   For i From 0 to n-1 Do
+   tab.concat(read(currentVectors))
+   And FOR
+   For i From 0 to tab.Length-2 Do
+   For j From 0 to tab.Length-1 Do
+   IF (Dot_Product(tab[i],tab[j])) = 0 {
+       read('tab[i] and tab[j] are orthognals')
+   }
+END
